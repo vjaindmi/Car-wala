@@ -1,0 +1,40 @@
+<div class="login-page" [@routerTransition]>
+    <div class="row justify-content-md-center">
+        <div class="col-md-4">
+            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
+            <h1>Car Wala</h1>
+            <form role="form">
+                <div class="form-content">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-underline input-lg" id="fn" placeholder="First Name" name="firstName"  [(ngModel)]="owner.firstName">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-underline input-lg" id="ln" placeholder="Last Name" name="lastName"  [(ngModel)]="owner.lastName">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control input-underline input-lg" id="email" placeholder="Email" name="emailId"  [(ngModel)]="owner.emailId">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control input-underline input-lg" id="address" placeholder="Address" name="address"  [(ngModel)]="owner.address">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control input-underline input-lg" id="mn" name="mobileNumber" placeholder="Mobile Number"
+                               [(ngModel)]="owner.phoneNumber"
+                               #mobileNumber="ngModel">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-underline input-lg" id="ps" placeholder="Password" name="password"  [(ngModel)]="owner.password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-underline input-lg" id="cps" placeholder="Repeat Password" name="rpassword"  [(ngModel)]="owner.rpassword">
+                    </div>
+                </div>
+                <a class="btn rounded-btn" (click)="doRegister()"> Register </a>&nbsp;
+                <a class="btn rounded-btn" [routerLink]="['/login']"> Log in </a>
+            </form>
+        </div>
+    </div>
+</div>

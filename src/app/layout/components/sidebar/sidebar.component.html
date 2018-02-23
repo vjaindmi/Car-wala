@@ -1,0 +1,20 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <div class="list-group">
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
+        </a>
+        <a [routerLink]="['/forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;My Cars
+        </a>
+        <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-table"></i>&nbsp;Rent a car
+        </a>
+        <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <span><i class="fa fa-fw fa-user"></i> {{ 'Profile' | translate }}</span>
+        </a>
+        <a  [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <span><i class="fa fa-fw fa-gear"></i> {{ 'Settings' | translate }}</span>
+        </a>
+
+    </div>
+</nav>
